@@ -1,0 +1,260 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+            body {
+                width: 100%;
+            }
+            * {
+                font-family: Helvetica, Verdana, Arial, sans-serif;
+                font-size: 12px;
+                color: #333;
+            }
+            form {
+                width: 100%;
+                margin: 16px;
+            }
+            label {
+                display: block;
+            }
+            select {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            .row {
+                display: flex;
+                flex-direction: row;
+            }
+            .column {
+                width: 320px;
+            }
+            .column:first-child {
+                padding-right: 16px;
+            }
+        </style>
+    </head>
+    <link rel="stylesheet" href="styles.css">
+    <body>
+
+        <form id='calculator'>
+            <div class='row'>
+                <div class='column'>
+                    <h2>Shafts</h2>
+                    <label for='shaft_weight_per_inch'>Shaft Weight per Inch (gr)</label>
+                    <select id='shaft_weight_per_inch'>
+                        <option value='7'>7</option>
+                        <option value='7.5'>7.5</option>
+                        <option value='8'>8</option>
+                        <option value='8.5'>8.5</option>
+                        <option value='9'>9</option>
+                        <option value='9.5'>9.5</option>
+                    </select>
+                    <label for='shaft_length'>Length of shaft (in)</label>
+                    <select id='shaft_length'>
+                        <option value='25'>25</option>
+                        <option value='25.5'>25.5</option>
+                        <option value='26'>26</option>
+                        <option value='26.5'>26.5</option>
+                        <option value='27'>17</option>
+                        <option value='27.5'>27.5</option>
+                        <option value='28'>28</option>
+                        <option value='28.5'>28.5</option>
+                        <option value='29'>29</option>
+                        <option value='29.5'>29.5</option>
+                        <option value='30'>30</option>
+                        <option value='30.5'>30.5</option>
+                        <option value='31'>31</option>
+                        <option value='31.5'>31.5</option>
+                        <option value='32'>32</option>
+                        <option value='32.5'>32.5</option>
+                        <option value='33'>33</option>
+                        <option value='33.5'>33.5</option>
+                        <option value='34'>34</option>
+                        <option value='34.5'>34.5</option>
+                        <option value='35'>35</option>
+                        <option value='35.5'>35.5</option>
+                    </select>
+                    <hr>
+                    <h2>Vanes</h2>
+                    <label for='number_vanes'># Vanes</label>
+                    <select id='number_vanes'>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                    </select>
+                    <label for='vane_unit_weight'>Weight of Vanes (gr)</label>
+                    <select id='vane_unit_weight'>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                    </select>
+                    <hr>
+                    <h2>Nocks</h2>
+                    <label for='nock_unit_weight'>Weight of Nocks (gr)</label>
+                    <select id='nock_unit_weight'>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                        <option value='12'>12</option>
+                    </select>
+
+                    <label for='nock_gap'>Nock Gap (in)</label>
+                    <select id='nock_gap'>
+                        <option value='.25'>.25</option>
+                        <option value='.5'>.5</option>
+                        <option value='.75'>.75</option>
+                    </select>
+                    <small>Nock Gap is the distance from the bottom of the nock groove to the point where the arrow shaft seats in the nock.</small>
+                    <hr>
+
+                    <h2>Wraps</h2>
+                    <label for='wrap_unit_weight'>Weight of Wrap (gr)</label>
+                    <select id='wrap_unit_weight'>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                    </select>
+                    <hr/>
+                    <h2>Points</h2>
+                    <label for='adapter_unit_weight'>Weight of Point Adapter (gr)</label>
+                    <select id='adapter_unit_weight'>
+                        <option value='25'>25</option>
+                        <option value='50'>50</option>
+                        <option value='75'>75</option>
+                        <option value='100'>100</option>
+                    </select>
+
+                    <label for='point_unit_weight'>Weight of Points (gr)</label>
+                    <select id='point_unit_weight'>
+                        <option value='75'>75</option>
+                        <option value='85'>85</option>
+                        <option value='90'>90</option>
+                        <option value='100'>100</option>
+                        <option value='110'>110</option>
+                        <option value='125'>125</option>
+                        <option value='150'>150</option>
+                    </select>
+                    <hr/>
+                    <button id='button'>Calculate</button>
+                </div>
+            </div>
+        </form>
+
+
+        <script type="text/javascript">
+
+            // objects
+            let $button = document.getElementById('button');
+            let $shaft_weight_per_inch = document.getElementById('shaft_weight_per_inch');
+            let $shaft_length = document.getElementById('shaft_length');
+            let $number_vanes = document.getElementById('number_vanes');
+            let $vane_unit_weight = document.getElementById('vane_unit_weight');
+            let $wrap_unit_weight = document.getElementById('wrap_unit_weight');
+            let $nock_unit_weight = document.getElementById('nock_unit_weight');
+            let $nock_gap = document.getElementById('nock_gap');
+            let $adapter_unit_weight = document.getElementById('adapter_unit_weight');
+            let $point_unit_weight = document.getElementById('point_unit_weight');
+
+            // functions
+            $button.addEventListener("click", calculate, {passive: true});
+
+            function calculate() {
+                // calculate the shaft weight
+                let $total_shaft_weight = $shaft_weight_per_inch.value * $shaft_length.value;
+
+                // calculate the vane weight
+                let $total_vane_weight = $number_vanes.value * $vane_unit_weight.value;
+
+                // calculate the sum weight of all components at the nock end
+                let $total_nock_end_weight = $total_vane_weight + parseFloat($nock_unit_weight.value) + parseFloat($wrap_unit_weight.value);
+
+                // calculate the sum weight of all components at the point end
+                let $total_point_end_weight = parseFloat($adapter_unit_weight.value) + parseFloat($point_unit_weight.value);
+
+                /* ==============================================================================
+                Step 1. Calculate Weight Distance Moment:
+
+                Formula for Calculating Weight Distance Moment with reference to Datum.
+                Assumes that the nock end weight is placed at .5" from end of arrow and
+                point end weight is placed at the very end of the arrow.
+
+                Formula:
+
+                   $total_nock_end_weight * (distance of nock end weight from nock end of arrow)
+                +  $total_point_end_weight * (distance of point end weight from nock end of arrow)
+                __________________________________________________________________________________
+                =  $weight_distance_moment
+
+                Example:
+
+                nock_end_weight @ .5"                         point_end_weight  @ shaft_length
+                         |                                                       |
+                  A -------------------------------------------------------------- B
+                  |- .5 -|
+                  |-------------------------- shaft_length - .5" ----------------|
+                  |-------------------------- shaft_length ----------------------|
+
+                ================================================================================= */
+
+                $a = parseFloat($total_nock_end_weight) * .5;
+                $b = parseFloat($total_point_end_weight) * parseFloat($shaft_length.value);
+                $weight_distance_moment = ( $a + $b );
+
+                /* =============================================================================
+                  Center of Gravity Formula
+
+                  $center_of_gravity = $weight_distance_moment / (total mass of components)
+
+                  For Example:
+
+                  $total_nock_end_weight = 20;
+                  $total_point_end_weight = 125;
+                  $weight_distance_moment = 2510;
+
+                  $center_of_gravity = 2510 / (125 + 20) = 17.31 inches from nock end of shaft
+
+                ================================================================================= */
+
+                $center_of_gravity = $weight_distance_moment / (parseFloat($total_nock_end_weight) + parseFloat($total_point_end_weight));
+
+                /* =============================================================================
+                Front of Center Calculation
+
+                Formula:
+                (Result is a percent)
+
+                c = Distance from bottom of nock groove to $center_of_gravity: $nock_gap + $center_of_gravity
+                d = Correct Arrow Length; from bottom of nock groove to end of bare shaft: $shaft_length + $nock_gap
+
+                $front_of_center = 100 * (c-(d/2)) / d
+
+                ================================================================================= */
+
+                $c = (parseFloat($nock_gap.value) + $center_of_gravity);
+                $d = (parseFloat($nock_gap.value) + parseFloat($shaft_length.value));
+
+                $front_of_center = 100 * (( $c - ($d / 2)) / $d);
+
+
+                let $txt = "total shaft weight: " + $total_shaft_weight + "\r" +
+                    "total vane weight: " + $total_vane_weight + "\r" +
+                    "nock weight: " + $nock_unit_weight.value + "\r" +
+                    "wrap weight: " + $wrap_unit_weight.value + "\r" +
+                    "nock end weight: " + $total_nock_end_weight + "\r" +
+                    "point end weight: " + $total_point_end_weight + "\r" +
+                    "weight distance moment: " + $weight_distance_moment + "\r" +
+                    "center of gravity: " + $center_of_gravity.toFixed(2) + " In. \r" +
+                    "front of center: " + $front_of_center.toFixed(2) + "%";
+
+                window.alert($txt);
+
+            }
+        </script>
+    </body>
+</html>
