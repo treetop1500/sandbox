@@ -1,0 +1,67 @@
+body {
+    text-align: left;
+    background-color: #cccccc;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===================================== */
+/* == COMMON STYLES ACROSS ALL BREAKS == */
+/* ===================================== */
+
+.wrapper {
+    width: 1376px;
+    max-width: 1376px;
+    min-width: 320px;
+    height: 152px;
+    margin: 100px 0 0 0;
+    overflow: hidden;
+    position: relative;
+    transform-origin: top left;
+    background: #ffffff;
+}
+
+/* arrows are 1376 x 77 */
+.arrow {
+    transition: scale .2s ease-in-out;
+    width: 2752px;
+    height: 152px;
+    display: block;
+    transform-origin: left 50%;
+    transform: scale(.5);
+    position: relative;
+
+}
+
+.arrow .shaft,
+.arrow .nock,
+.arrow .wrap,
+.arrow .adapter,
+.arrow .vanes {
+    position: absolute;
+    top: 0;
+}
+
+.arrow .shaft {
+    left: 0;
+}
+
+.arrow .nock {
+    left: 0;
+}
+
+.arrow .wrap {
+    left: 170px;
+}
+
+.arrow .adapter {
+    right: 0;
+}
+
+.arrow .vanes {
+    left: 200px;
+}
+
+.arrow:hover {
+
+}

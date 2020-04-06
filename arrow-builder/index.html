@@ -1,0 +1,92 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="styles.css">
+<body>
+
+<div class='wrapper' id="wrapper">
+
+
+
+    <!-- ARROW CONTAINER -->
+    <div class="arrow" id="arrow">
+
+        <img src="images/shaft.jpg" class="shaft" />
+        <img src="images/nock.jpg" class="nock" />
+        <img src="images/wrap.jpg" class="wrap" />
+        <img src="images/vanes.png" class="vanes" />
+        <img src="images/adapter.jpg" class="adapter" />
+    </div>
+    <!-- / ARROW CONTAINER -->
+
+
+
+</div>
+
+
+<script>
+    let arrow = document.getElementById("arrow");
+    let wrapper = document.getElementById("wrapper");
+    let arrowWidth = 2752;
+    let newScale;
+    let newWidth;
+    let mouseX;
+    let newX;
+
+
+    resize = function() {
+        newWidth = window.innerWidth;
+        newScale = ( newWidth / (arrowWidth / 2) );
+
+        //console.log(newWidth);
+        //console.log(newScale);
+
+        wrapper.style.setProperty('transform', 'scale(' +  newScale + ')');
+    };
+
+
+
+
+    wrapper.addEventListener("mousemove", e => {
+        mouseX = e.pageX;
+
+
+
+        let mousePercentX = mouseX / newWidth;
+
+        let maxXPosition = (arrowWidth - newWidth);
+        console.log(mousePercentX);
+
+        newX = ((maxXPosition * mousePercentX) * -1) + "px";
+
+        console.log(newX);
+
+        //let newX = (mouseX * 2) * -1;
+
+        //newX = ((mouseX) / 1.22 * -1) + "px";
+        //console.log(newX);
+        arrow.style.setProperty('transform', 'scale(1) translateX(' + newX +')');
+    });
+
+
+    window.addEventListener("resize", e => {
+        resize();
+    });
+
+
+
+
+
+    wrapper.addEventListener("mouseout", e => {
+        arrow.style.setProperty('transform', 'scale(.5)')
+    });
+
+
+
+    resize();
+
+</script>
+
+</body>
+</html>
