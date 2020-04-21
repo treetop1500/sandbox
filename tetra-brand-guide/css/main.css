@@ -1,0 +1,163 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+* {
+    text-align: center;
+    font-size: inherit;
+
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+ul, ol, li {
+    text-align: left;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #191414;
+    width: 100%;
+}
+
+.branding-guidelines-wrap {
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+small {
+    font-size: .75rem;
+}
+p, ul, ol, div {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+p.subhead {
+    font-size: 1.375rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #3D4543;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h3,h4,h5,h6 {
+    opacity: 90%;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: .875rem; }
+
+
+img {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+div.divider {
+    border-top: 1px solid #9e9e9e;
+    margin: 3rem 0;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border: 1px solid #9e9e9e;
+    padding: 0 2rem;
+}
+
+hr {
+    background: #9e9e9e;
+    height: 1px;
+    display: block;
+    margin: 2rem 0;
+    border: 0;
+}
+
+.flex-wrapper div {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+div.dark {
+    background: #3D4543;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.swatch-wrapper img {
+    max-width: 200px;
+}
+
+.no-border {
+    border:none;
+}
+
+.icon-wrapper div {
+    margin: 0;
+}
+
+.min-size-logo {
+    max-width: 381px;
+}
+
+.icon {
+    width: 100%;
+    min-width: 50px;
+    max-width: 100px;
+    height: auto;
+    margin: 0;
+}
+
+
+@media only screen and (min-width: 481px) {
+
+    * {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+    .flex-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .exclusion-zone {
+        max-width: 60%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+    .flex-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .branding-guidelines-wrap {
+        padding: 4rem;
+    }
+}
