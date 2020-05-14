@@ -60,7 +60,6 @@ h4 { font-size: 1.25rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: .875rem; }
 
-
 img {
     width: 100%;
     max-width: 1920px;
@@ -96,10 +95,6 @@ hr {
     margin: 0 auto;
 }
 
-
-
-
-
 div.dark {
     background: #3D4543;
 }
@@ -132,9 +127,7 @@ div.dark {
     margin: 0;
 }
 
-
 @media only screen and (min-width: 481px) {
-
     * {
         text-align: left;
     }
@@ -142,8 +135,6 @@ div.dark {
     h1 {
         font-size: 5rem;
     }
-
-
 }
 
 @media only screen and (min-width: 768px) {
