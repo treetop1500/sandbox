@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phoenix</title>
+
+    <style type="text/css">
+        html, body, .wrapper {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .nav {
+            background: black;
+            height: 75px;
+            width: 100%;
+            color: #cccccc;
+        }
+
+        .hero {
+            height: calc(100vh - 75px);
+            min-height: calc(100vh - 75px);
+            overflow: hidden;
+            position: relative;
+        }
+        video {
+            height: calc(100vh - 75px);
+            min-height: calc(100vh - 75px);
+            object-fit: cover;
+            object-position: 50% 10%;
+        }
+        .watermark {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 16px;
+            background: rgba(255,255,255,.25);
+            padding: 24px;
+        }
+        .else {
+            padding: 36px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<div class='wrapper'>
+    <div class='nav'>Navigation</div>
+    <div class='hero'>
+        <video id="homepage-video" playsinline="" autoplay="" muted="" loop="" height="auto" width="100%" poster="/videos/poster.png">
+            <source src="https://master-7rqtwti-pja4u7oakah7k.us-2.platformsh.site//videos/home.mp4" type="video/mp4">
+            <source src="/videos/home.ogv" type="video/ogv">
+            <source src="https://master-7rqtwti-pja4u7oakah7k.us-2.platformsh.site//videos/home.webm" type="video/webm">
+            Your browser does not support the video tag
+        </video>
+        <div class="watermark">Look at me! I'm a watermark!</div>
+    </div>
+    <div class='else'>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate tempus massa, ut lobortis augue
+            semper quis. Donec vulputate bibendum sapien. Curabitur est tortor, placerat non sodales eu, fringilla non
+            est. Phasellus finibus dapibus ligula, ut aliquam quam hendrerit quis. Donec accumsan ornare luctus. Ut ut
+            lectus felis. Vestibulum elementum neque eu egestas molestie. Integer id hendrerit odio. Integer quam lectus,
+            maximus eget risus a, aliquam semper velit.
+        </p>
+        <p>
+            Nunc id sollicitudin risus. Maecenas nec finibus arcu, et interdum mauris. Quisque convallis ornare rhoncus.
+            Fusce congue nibh et sapien lobortis pulvinar. Suspendisse interdum interdum sapien, at mollis risus mattis
+            a. Proin tincidunt malesuada auctor. Suspendisse et quam tincidunt, euismod ligula a, pulvinar neque. Cras
+            blandit euismod auctor. In ultricies nisi tellus, vitae vehicula eros bibendum sed. Praesent nec mauris est.
+            Aenean pulvinar velit velit, et malesuada dolor congue in. Quisque facilisis eros elit. Praesent nunc orci,
+            porta vitae mauris sed, dignissim posuere libero. In hac habitasse platea dictumst.
+        </p>
+        <p>
+            Cras eget nibh ac orci ultrices pretium ut vel augue. Donec placerat, lectus finibus egestas porta, metus
+            ligula rutrum purus, et elementum neque eros hendrerit leo. Nunc porttitor, felis vitae maximus varius, quam
+            libero posuere nulla, vel vestibulum dolor metus sit amet odio. Cras dapibus, nisi eget accumsan aliquam,
+            ipsum nibh dictum erat, in blandit libero enim eget dui. Sed vulputate lorem diam, a semper felis lacinia
+            in. Pellentesque nec nisi erat. Sed pretium sit amet dolor in dapibus. Etiam malesuada lacinia est, at
+            porttitor nisl gravida non. Aliquam erat volutpat. Suspendisse et tincidunt leo. Praesent a facilisis leo,
+            a ornare ex. Sed sed est semper, interdum magna at, pellentesque eros.
+        </p>
+        <p>
+            Ut vulputate suscipit est, eu consectetur lectus accumsan et. Quisque gravida mattis mauris, viverra tempor
+            turpis rutrum eu. Pellentesque malesuada magna purus, id viverra lorem ullamcorper porta. Quisque sollicitudin
+            volutpat turpis, ac rhoncus quam fringilla eget. Integer risus turpis, commodo quis tincidunt ut, iaculis
+            vulputate velit. Aenean ut justo posuere lorem ultrices sollicitudin eu at ex. Pellentesque porttitor mi
+            vitae neque pulvinar, quis vulputate magna volutpat. Aliquam rhoncus ligula eget lacus accumsan, sed dictum
+            lectus cursus.
+        </p>
+        <p>
+            Maecenas lacinia dui nec tempor ullamcorper. Donec fermentum est eu ante consectetur, sit amet tristique ex
+            porttitor. Sed non mi sit amet quam fermentum maximus. Interdum et malesuada fames ac ante ipsum primis in
+            faucibus. Quisque blandit mollis suscipit. Fusce quis turpis in nulla vestibulum tristique. Cras nec
+            vestibulum dolor, non elementum tellus. Fusce tempor est dui. In molestie nulla vitae sem maximus consequat.
+            Sed at sodales erat. In auctor, libero eu ullamcorper ullamcorper, felis metus fermentum leo, nec tempus
+            mauris enim eget nisi. Aliquam quam magna, iaculis ac nulla volutpat, elementum pretium diam. Duis lacinia
+            est sed diam ullamcorper, eget sagittis nulla posuere. In in posuere dolor. Praesent a tincidunt est.
+            Nulla consectetur enim ultricies, vehicula risus ut, congue nisi.
+        </p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
